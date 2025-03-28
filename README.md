@@ -41,7 +41,7 @@ python src/eval.py
 --test_file_path PDE-Sol/json
 --pdb_folder PDE_Sol/pdb 
 --pdb_index PDE_Sol/pdb_index.json 
-----pretrained_path ckpt/SRPM-Sol.pth 
+----pretrained_path weight/SRPM-Sol.pth 
 ```
 
 ## Your own dataset
