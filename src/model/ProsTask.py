@@ -31,8 +31,6 @@ class prosSouTask(nn.Module):
         self.type='esm3'
         self.pdb_index=pdb_index
         self.convbert_dir=convbert_dir
-        self.alpha=nn.Parameter(torch.tensor(1.0))
-        self.beta=nn.Parameter(torch.tensor(0.0))
         self.classification=ClassifincationHead(input_dim=1536,type=self.type,dropout=self.dropout,num_classes=2,device=self.device,
                                                 classification_type=self.classification_type,convbert_dir=self.convbert_dir,c_f=c_f).to(self.device)
         
@@ -56,7 +54,6 @@ class prosSouTask(nn.Module):
         coordinates = coordinates.to(self.device) 
         origin_length = origin_length.to(self.device)  
         labels = labels.to(self.device) 
-        a=nn.Parameter()
         with open(self.pdb_index, "r") as f:
             pdb_file_map=json.load(f)
         pdb_file_map = {int(k): v for k, v in pdb_file_map.items()}
@@ -126,7 +123,7 @@ class prosSouTask(nn.Module):
                                         structure_tokens=torch.cat(batch_struct,dim=0),
                                         structure_coords=torch.cat(batch_coords,dim=0))
         
-        model_output = self.alpha*model_output+self.beta* gravy_expanded   #fusion
+
 
         if self.classification_type=='mlp':
             embeddings = model_output[:, 1:-1, :]  

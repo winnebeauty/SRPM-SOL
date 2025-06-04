@@ -35,16 +35,6 @@ The JSON format of our data can be found in PDE Sol. We have open-sourced the [r
 
 If you need to correctly run the secondary structure and other related information, please install the DSSP tool library correctly in advance
 
-## Start Testing 
-You need to download our dataset and wight. Then put them into PDE-Sol/pdb and weight/ respectively.
-
-```
-python src/eval.py 
---test_file_path PDE-Sol/json
---pdb_folder PDE_Sol/pdb 
---pdb_index PDE_Sol/pdb_index.json 
-----pretrained_path weight/SRPM-Sol.pth 
-```
 
 ## Your own dataset
 
@@ -64,3 +54,17 @@ python train.py\
 --model_dir ckpt
 ```
 
+## Citation
+
+```
+@ARTICLE{11002362,
+  author={Ge, Wenhui and Tan, Yang and Yu, Huiqun and Fan, Guisheng and Li, Mingchen},
+  journal={IEEE Transactions on Computational Biology and Bioinformatics}, 
+  title={SRPM-SOL: A Structure Robust Protein Multimodal Model for Solubility Prediction}, 
+  year={2025},
+  pages={1-12},
+  keywords={Proteins;Predictive models;Feature extraction;Data models;Computational modeling;Deep learning;Accuracy;Robustness;Amino acids;Analytical models;Protein Solubility;Multimodal;ESM3;Deep Learning},
+  doi={10.1109/TCBBIO.2025.3569286}
+  }
+
+```
