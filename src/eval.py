@@ -25,7 +25,7 @@ def create_parser():
     #model     
     args_parser.add_argument('--type', type=str, default='esm3')                            
     args_parser.add_argument('--dropout', type=float, default=0.25)
-    args_parser.add_argument('--sequence_max_length', type=int, default=128)
+    args_parser.add_argument('--sequence_max_length', type=int, default=512)
     args_parser.add_argument('--classification_type',type=str,choices=['mlp','convbert','light_Attention','lstm'],default='convbert')
     
     #evaluation

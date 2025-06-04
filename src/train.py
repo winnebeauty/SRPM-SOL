@@ -32,13 +32,13 @@ def create_parser():
     #model     
     args_parser.add_argument('--type', type=str, default='esm3')                            
     args_parser.add_argument('--dropout', type=float, default=0.25)
-    args_parser.add_argument('--sequence_max_length', type=int, default=128)
+    args_parser.add_argument('--sequence_max_length', type=int, default=512)
     args_parser.add_argument('--classification_type',type=str,choices=['mlp','convbert','light_Attention','lstm'],default='convbert')
     
     
     # train
     args_parser.add_argument('--seed', type=int, default=0)
-    args_parser.add_argument('--epoch', type=int, default=2)
+    args_parser.add_argument('--epoch', type=int, default=50)
     args_parser.add_argument('--lr', type=float, default=0.0001)
     args_parser.add_argument('--lora', type=bool, default=False)
     args_parser.add_argument('--batch_size', type=int, default=4)

@@ -31,7 +31,9 @@ conda activate sprm-sol
 
 # 👉Start with SPRM-Sol
 
-The JSON format of our data can be found in PDE Sol. We have open-sourced the [model weights](https://huggingface.co/winnw/SPRM-Sol) of SPRM-Sol for solubility prediction on Hugging Face. The weight files of various PLMs can be downloaded from the Transformers library. The protein structure [datasets](https://huggingface.co/datasets/winnw/PDE-Sol/tree/main) used for SPRM-Sol training are also uploaded to Hugging Face.
+The JSON format of our data can be found in PDE Sol. We have open-sourced the [related materials](https://huggingface.co/datasets/winnw/PDE-Sol/tree/main) of SPRM-Sol for solubility prediction on Hugging Face. 
+
+If you need to correctly run the secondary structure and other related information, please install the DSSP tool library correctly in advance
 
 ## Start Testing 
 You need to download our dataset and wight. Then put them into PDE-Sol/pdb and weight/ respectively.

@@ -20,7 +20,7 @@ from Bio.SeqUtils.ProtParam import ProteinAnalysis
 from data.ConvertSeq import sequence_to_index
 from torch.utils.data import random_split
 
-SEQ_MAX_LENGTH=128
+SEQ_MAX_LENGTH=512
 
 
 def calculate_gravy(sequence):
